@@ -14,6 +14,9 @@
 	color: black;
 	size: 12px;
 }
+.big-banner{
+	backgroung-image: url('/resources/static/assets/img/cupula/placeholder_user_girl.jpg');
+}
 h1{
 	font-family: Montserrat-Bold;
 	font-weight: bold;

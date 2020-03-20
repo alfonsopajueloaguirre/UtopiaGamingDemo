@@ -34,27 +34,18 @@ public class User {
 	@ManyToOne
 	private Role role;
 	
-	@OneToMany(mappedBy="user", cascade=CascadeType.ALL)
-	private List<Purchase> purchases = new ArrayList<>();
-	
-	@OneToMany(mappedBy="user")
-	private List<EventRegister> eventsReg = new ArrayList<>();
-	
 	protected User() {}
 
 	public User(String username) {
 		this.name = username;
 	}
-	public User(String email, String name, String firstName, String lastName, String password, String  role,
-			List<Purchase> purchases, List<EventRegister> eventsReg) {
+	public User(String email, String name, String firstName, String lastName, String password, String  role) {
 		this.email = email;
 		this.name = name;
 		this.passwordHash = new BCryptPasswordEncoder().encode(password);
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.roles = new ArrayList<>(Arrays.asList(role));
-		this.purchases = purchases;
-		this.eventsReg = eventsReg;
 	}
 	
 	public User(String email, String name, String firstName, String lastName, String passwordHash, Role role,String... roles) {
@@ -143,25 +134,6 @@ public class User {
 
 	public void setRole(Role role) {
 		this.role = role;
-	}
-
-	public List<Purchase> getPurchases() {
-		return purchases;
-	}
-
-	public void setPurchases(List<Purchase> purchases) {
-		this.purchases = purchases;
-	}
-
-	public List<EventRegister> getEventsReg() {
-		return eventsReg;
-	}
-
-	public void setEventsReg(List<EventRegister> eventsReg) {
-		this.eventsReg = eventsReg;
-	}
-	public void addEventRegister(EventRegister register) {
-		this.eventsReg.add(register);
 	}
 	
 	

@@ -13,10 +13,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import com.lcdd.backend.dbrepositories.PurchaseRepository;
+
 import com.lcdd.backend.dbrepositories.RoleRepository;
 import com.lcdd.backend.dbrepositories.UserRepository;
-import com.lcdd.backend.pojo.Purchase;
 import com.lcdd.backend.pojo.Role;
 import com.lcdd.backend.pojo.User;
 
@@ -29,8 +28,7 @@ public class UserController {
 	@Autowired
 	private RoleRepository roleRepository;
 	
-	@Autowired
-	private PurchaseRepository purchaseRepository;
+	
 	
 	@DeleteMapping("/users/{id}")
 	public ResponseEntity<Object> deleteUserById(@PathVariable long id) {

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import javax.persistence.CascadeType;
+
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -12,9 +12,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
 
 @Entity
 public class User {
@@ -26,7 +25,7 @@ public class User {
 	private String name;
 	private String firstName;
 	private String lastName;
-	private String passwordHash;
+	private String password;
 	
 	@ElementCollection(fetch = FetchType.EAGER)
 	private List<String> roles;
@@ -42,30 +41,30 @@ public class User {
 	public User(String email, String name, String firstName, String lastName, String password, String  role) {
 		this.email = email;
 		this.name = name;
-		this.passwordHash = new BCryptPasswordEncoder().encode(password);
+		this.password = password;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.roles = new ArrayList<>(Arrays.asList(role));
 	}
 	
-	public User(String email, String name, String firstName, String lastName, String passwordHash, Role role,String... roles) {
+	public User(String email, String name, String firstName, String lastName, String password, Role role,String... roles) {
 		super();
 		this.email = email;
 		this.name = name;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.passwordHash = new BCryptPasswordEncoder().encode(passwordHash);
+		this.password = password;
 		this.role = role;
 		this.roles = new ArrayList<>(Arrays.asList(roles));
 	}
 
-	public User(String email, String name, String firstName, String lastName, String passwordHash, String... roles) {
+	public User(String email, String name, String firstName, String lastName, String password, String... roles) {
 		super();
 		this.email = email;
 		this.name = name;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.passwordHash = new BCryptPasswordEncoder().encode(passwordHash);
+		this.password = password;
 		this.roles = new ArrayList<>(Arrays.asList(roles));
 	}
 	
@@ -112,12 +111,12 @@ public class User {
 		this.lastName = lastName;
 	}
 
-	public String getPasswordHash() {
-		return passwordHash;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setPasswordHash(String passwordHash) {
-		this.passwordHash = passwordHash;
+	public void setPasswordHash(String password) {
+		this.password = password;
 	}
 
 	public List<String> getRoles() {

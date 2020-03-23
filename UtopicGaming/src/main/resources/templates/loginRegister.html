@@ -1,65 +1,88 @@
+<!doctype html>
+<html class="no-js" lang="">
+
 <body>
   {{>components/header}}
 
-  <div class="container mt-3 mb-5">
-    <div class="row">
+<div class="container mt-3 mb-5 big-banner">
+	<div class="bg"></div>
+	<div class="row">
       <div class="col-6 mx-auto">
-        <img class="mx-auto d-block" src="/assets/img/logo/png/logo_grande.png" alt="Avatar" width="150" height="150">
+        <img class="mx-auto d-block" src="/assets/img/logo/png/UG.png" alt="Avatar" width="150" height="150">
+        <br>
+        <h6 align="center">¡Bienvenido a la mayor comunidad del mundo gaming</h6>
       </div>
     </div>
+    
+    
+   <div class="col-12 mx-auto">
+
     <div class="row">
-      <div class="col-6 mx-auto">
-      <h1>Iniciar Sesión</h1>
-      
-        
+  		
+  		
+  		
+  		<div class="col-sm-6">
+  		<h1>Register</h1>
+  		<form id="register-form" action="registerUser" method="post">
+  		<div class="form-group">
 
-          <div class="form-group">
-          <div class="row">
-  			<div class="col-sm-4">
-  			<label for="login-form_username">Username</label>
-            <input type="text" name="username" class="form-control" id="login-form_username" placeholder="Enter Username" required>
             <div class="form-group">
-            <label for="login-form_password">Password</label>
-            <input type="password"name="password" class="form-control" id="login-form_password" placeholder="Enter Password" required>
-          </div>
+              <label class="register-form_username">Username</label>
+              <input type="text" class="form-control" name="name" id="register-username" placeholder="Username" required>
             </div>
-          
-  			
-  			
-  			<div class="col-sm-8">
-  			<form id="login-form" action="" method="POST">
-  			<label for="login-form_username">Username</label>
-            <input type="text" name="username" class="form-control" id="login-form_username" placeholder="Enter Username" required>
+
             <div class="form-group">
-            <label for="login-form_password">Password</label>
-            <input type="password"name="password" class="form-control" id="login-form_password" placeholder="Enter Password" required>
-          	</div>
-          </div>
-          
-  			</div>
-            
-  			</div>
+              <label class="register-form_email">E-mail</label>
+              <input type="text" class="form-control" name="email" id="register-email" placeholder="E-mail" required>
+            </div>
 
-          <div class="row">
-            <div class="col-6">
-            
-              <input type="hidden" name="_csrf" value="{{token}}"/>
-
-              <button type="submit" class="btn btn-primary" id="login-form_button">Login</button>
-
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="login-form_remember">
-                <label class="form-check-label" for="login-form_remember">Remember me</label>
+            <div class="form-group">
+              <label class="register-form_password">Contraseña</label>
+              <input type="password" class="form-control" name="passwordHash" id="register-password" placeholder="Contraseña" required>
+            </div>
+		
+            <div class="form-group">
+              <label class="register-form_password">Confirmar contraseña</label>
+              <input type="password" class="form-control" id="password-confirm" placeholder="Confirmar contraseña" required>
+            </div>
+ 		
+ 			<input type="hidden" name="_csrf" value="{{token}}"/>
+ 			
+            <div class="control-group">
+              <div class="controls">
+                <button id="register" class="btn btn-primary">Register</button>
               </div>
             </div>
-            <div class="col-6" align="right">
-              <button type="cancel" class="btn btn-primary" id="login-form_button">Cancel</button>
-            </div>
           </div>
-        </form>
-      </div>
-    </div>
+  		</form>
+        </div>
+          
+
+
+  			
+  		<div class="col-sm-6">
+	  		<form id="login-form" action="loginUser" method="POST">
+	  		<h1>Login</h1>
+		  		<label for="login-form_username">Username</label>
+		        <input type="text" name="username" class="form-control" id="login-form_username" placeholder="Enter Username" required>
+	            <div class="form-group">
+	            	<label for="login-form_password">Password</label>
+	            	<input type="password"name="password" class="form-control" id="login-form_password" placeholder="Enter Password" required>
+	          	</div>
+	         	<button type="submit" class="btn btn-primary" id="login-form_button">Login</button>
+	            <div class="form-check">
+	               	<input class="form-check-input" type="checkbox" value="" id="login-form_remember">
+	                <label class="form-check-label" for="login-form_remember">Remember me</label>
+	            </div>
+	        </form>
+        </div>
+        
   </div>
+            
+
+	</div>
+</div>
+
 
   {{>components/footer}}
 

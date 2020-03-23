@@ -5,18 +5,14 @@ public class RegisterDataForm {
 
 	private String email;
 	private String name;
-	private String firstName;
-	private String lastName;
-	private String passwordHash;
+	private String password;
 
 	
-	public RegisterDataForm(String email, String name, String firstName, String lastName, String passwordHash) {
+	public RegisterDataForm(String email, String name, String password) {
 		super();
 		this.email = email;
 		this.name = name;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.passwordHash = passwordHash;
+		this.password = password;
 	}
 
 	
@@ -36,28 +32,13 @@ public class RegisterDataForm {
 		this.name = name;
 	}
 
-	public String getFirstName() {
-		return firstName;
+
+	public String getPassword() {
+		return password;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public String getPasswordHash() {
-		return passwordHash;
-	}
-
-	public void setPasswordHash(String passwordHash) {
-		this.passwordHash = passwordHash;
+	public void setPasswordHash(String password) {
+		this.password = password;
 	}
 
 	

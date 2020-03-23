@@ -29,7 +29,7 @@
   		
   		<div class="col-sm-6">
   		<h1>Register</h1>
-  		<form class="form-horizontal" action="registerUser" method="POST">
+  		<form id="register-form" action="registerUser" method="PUT">
   		<div class="form-group">
 
             <div class="form-group">
@@ -67,7 +67,7 @@
 
   			
   		<div class="col-sm-6">
-	  		<form id="login-form" action="" method="POST">
+	  		<form id="login-form" action="loginUser" method="POST">
 	  		<h1>Login</h1>
 		  		<label for="login-form_username">Username</label>
 		        <input type="text" name="username" class="form-control" id="login-form_username" placeholder="Enter Username" required>
@@ -85,7 +85,6 @@
         
   </div>
             
-<input type="hidden" name="_csrf" value="{{token}}"/>
 
 	</div>
 </div>

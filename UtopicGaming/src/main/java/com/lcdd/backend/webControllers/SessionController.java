@@ -19,7 +19,6 @@ public class SessionController {
 	
 	@ModelAttribute
     public void addAttributes(Model model, HttpServletRequest request) {
-		model.addAttribute("logged",session.getIsLogggedIn());
 		model.addAttribute("session", session);
 		model.addAttribute("isAdmin", request.isUserInRole("ADMIN"));
 
@@ -27,8 +26,6 @@ public class SessionController {
 	
 	@RequestMapping("logOut")
 	public String logOut (Model model, HttpServletRequest request) {
-		session.setIsLogggedIn(false);
-		model.addAttribute("logged",session.getIsLogggedIn());
 		return "index";
 	}
 	

@@ -8,10 +8,9 @@ public class RegisterDataForm {
 	private String password;
 
 	
-	public RegisterDataForm(String email, String name, String password) {
-		super();
+	public RegisterDataForm(String email, String username, String password) {
 		this.email = email;
-		this.name = name;
+		this.name = username;
 		this.password = password;
 	}
 

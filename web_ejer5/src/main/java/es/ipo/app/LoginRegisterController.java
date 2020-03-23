@@ -32,14 +32,14 @@ public class LoginRegisterController {
 		
 		userSession.setUsername(newUser.getName());
 		
-		return "/principal";
+		return "/biblioteca";
 	}
 	
 	@RequestMapping(value= {"/loginUser"})
 	public String loginUser(Model model, RegisterDataForm user) {
-		model.addAttribute("session", userSession);
+		userSession.setUsername(user.getName());
 		
-		return "/principal";
+		return "/biblioteca";
 	}
 	
 }

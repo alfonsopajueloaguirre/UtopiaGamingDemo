@@ -1,4 +1,4 @@
-package es.urjc.code.daw.tablonanuncios;
+package es.ipo.app;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.SessionScope;

@@ -1,4 +1,4 @@
-package es.urjc.code.daw.tablonanuncios;
+package es.ipo.app;
 
 public class Anuncio {
 

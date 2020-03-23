@@ -1,4 +1,4 @@
-package es.urjc.code.daw.tablonanuncios;
+package es.ipo.app;
 
 
 
@@ -9,10 +9,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-
-import es.urjc.code.daw.tablonanuncios.UserSession;
-import es.urjc.code.daw.tablonanuncios.RegisterDataForm;
-import es.urjc.code.daw.tablonanuncios.User;
+import es.ipo.app.RegisterDataForm;
+import es.ipo.app.User;
+import es.ipo.app.UserSession;
 
 @Controller
 public class LoginRegisterController {

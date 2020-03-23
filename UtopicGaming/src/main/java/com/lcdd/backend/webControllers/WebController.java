@@ -19,18 +19,6 @@ public class WebController {
 	  // model.addAttribute("username", user.getName());
 	  return "admin";
   }
-  @RequestMapping("/about_us")
-  public String about_us() {
-    return "about_us";
-  }
-  @RequestMapping("/contact")
-  public String contact() {
-    return "contact";
-  }
-  @RequestMapping("/events")
-  public String events() {
-    return "events";
-  }
   @RequestMapping("/register")
   public String register() {
     return "register";

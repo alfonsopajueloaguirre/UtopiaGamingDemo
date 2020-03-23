@@ -8,9 +8,8 @@ import org.springframework.web.context.annotation.SessionScope;
 public class UserSession {
 	private String username;
 	private String email;
+
 	
-
-
 	public String getUsername() {
 		return username;
 	}

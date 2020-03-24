@@ -1,23 +1,26 @@
 <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
     <ul class="navbar-nav">
-		<li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" id="header_usr_dropdown" role="button" data-toggle="dropdown" href="#">{{session.username}}<img src="/assets/img/cupula/placeholder_user_man.png" class="rounded-circle" id="header_profile_image" width="50" height="50"></a>
-			<div class="dropdown-menu">
-				<a class="dropdown-item" href="/profile">Profile</a>
-         			<div class="dropdown-divider"></div>
-         			<a class="dropdown-item" href="/logOut">Logout</a>
-			</div>
-		</li>
-		<li class="nav item">
-			<a class="navbar-brand" href="/biblioteca">
-		    	<img src="/assets/img/logo/png/UG.png" alt="logo" style="width:40px;">
-			</a>
-		</li>
-		<li class="nav-item">
-			<a type="button" class="fas fa-dollar-sign" id="login_button" href="/options"></a>
-		</li>
-		<li class="nav-item">
-			<a type="button" class="fas fa-cogs" id="register_button" href="/donations"></a>
-		</li>    
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" id="header_usr_dropdown" role="button" data-toggle="dropdown" href="#">{{session.username}}<img src="/assets/img/cupula/placeholder_user_man.png" class="rounded-circle" id="header_profile_image" width="50" height="50"></a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="/profile">Profile</a>
+          			<div class="dropdown-divider"></div>
+          			<a class="dropdown-item" href="/">Logout</a>
+				</div>
+			</li>
+			<li class="nav item">
+				<a class="navbar-brand" href="/biblioteca">
+			    	<img src="/assets/img/logo/png/logo48.png" width="50" height="50" class="d-inline-block align-center">
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+			    	<span class="navbar-toggler-icon"></span>
+		  		</button> 
+			</li>
+			<li class="nav-item">
+				<a type="button" class="fas fa-dollar-sign" id="login_button" href="/options"></a>
+			</li>
+			<li class="nav-item">
+				<a type="button" class="fas fa-cogs" id="register_button" href="/donations"></a>
+			</li>    
     </ul>
 </nav>

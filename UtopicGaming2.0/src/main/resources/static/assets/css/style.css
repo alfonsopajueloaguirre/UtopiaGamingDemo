@@ -17,6 +17,16 @@
 .big-banner{
 	backgroung-image: url('/resources/static/assets/img/cupula/placeholder_user_girl.jpg');
 }
+#logo_icon{
+	margin-left: 400px;
+	font-size: 12px;
+}
+#option_button{
+	margin-left: 30px;
+}
+#donation_button{
+	margin-left: 380px;
+}
 h1{
 	font-family: Montserrat-Bold;
 	font-weight: bold;

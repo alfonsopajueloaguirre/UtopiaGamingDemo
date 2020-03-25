@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class bibliotecaController {
 	
-	@GetMapping(value= {"biblioteca"})
+	@GetMapping(value= {"/biblioteca"})
 	public String serveBiblio(Model model) {
 		return "biblioteca";
 	}
